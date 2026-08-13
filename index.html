@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoveTech · Coming Soon</title>
+<style>
+  :root{--sys:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden}
+  body{font-family:var(--sys);position:relative;
+    background:radial-gradient(85% 55% at 50% -6%,#ffe6c4,transparent 62%),
+      linear-gradient(163deg,#ffcfa0 0%,#ff9d8b 42%,#f4758f 74%,#e65f86 100%);
+    background-attachment:fixed;}
+  .glow{position:fixed;inset:-25%;z-index:1;pointer-events:none;
+    background:radial-gradient(40% 34% at 50% 42%,rgba(255,216,172,.55),transparent 62%);
+    mix-blend-mode:screen;animation:drift 22s ease-in-out infinite alternate;}
+  @keyframes drift{
+    0%{transform:translate(-4%,-3%) scale(1);opacity:.5}
+    50%{transform:translate(3%,2%) scale(1.1);opacity:.8}
+    100%{transform:translate(-2%,3%) scale(1.03);opacity:.58}}
+  @media (prefers-reduced-motion:reduce){.glow{animation:none;opacity:.6}}
+  .wrap{position:fixed;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 22px;}
+  .logo{width:clamp(64px,9vw,92px);height:clamp(64px,9vw,92px);border-radius:24%;display:grid;place-items:center;
+    background:linear-gradient(150deg,#ff6b6b,#f23b3b 55%,#d11f1f);
+    box-shadow:0 16px 46px rgba(200,40,40,.4),inset 0 1px 2px rgba(255,255,255,.55);}
+  .logo svg{width:58%;height:58%}
+  .soon{margin:clamp(20px,3vh,32px) 0 clamp(24px,4vh,40px);font-size:clamp(11px,1.4vw,13px);letter-spacing:.4em;font-weight:700;
+    text-transform:uppercase;color:#9c1f3c;padding:.6rem 1.3rem;border-radius:100px;border:1px solid rgba(160,30,55,.35);background:rgba(255,255,255,.42);}
+  .wordmark{font-family:var(--sys);font-weight:800;line-height:.9;letter-spacing:-.02em;font-size:clamp(56px,11vw,128px);text-transform:uppercase;
+    filter:drop-shadow(0 3px 18px rgba(150,30,55,.28));}
+  .wordmark .a{background:linear-gradient(180deg,#8a1330,#c01f3c);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .wordmark .b{background:linear-gradient(180deg,#c01f3c,#e8394f);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .tagline{margin-top:clamp(22px,3.2vh,34px);font-size:clamp(16px,2vw,22px);color:#8a2440;font-weight:500;}
+  .inq{margin-top:clamp(30px,5vh,52px);font-size:clamp(12px,1.5vw,15px);color:#9a3a52;font-weight:600;}
+  .email{margin-top:.9rem;display:inline-block;text-decoration:none;font-weight:700;color:#fff;font-size:clamp(14px,1.8vw,18px);
+    padding:.75rem 1.7rem;border-radius:100px;background:linear-gradient(100deg,#e8324e,#ff7a5a);box-shadow:0 12px 40px rgba(224,60,70,.5);transition:.2s;}
+  .email:hover{filter:brightness(1.05);transform:translateY(-1px)}
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="logo"><svg viewBox="0 0 100 100" fill="none"><path d="M50 84 C50 84 12 58 12 34 C12 20 24 14 34 14 C42 14 48 19 50 26 C52 19 58 14 66 14 C76 14 88 20 88 34 C88 58 50 84 50 84 Z" fill="#fff"/></svg></div>
+    <div class="soon">Coming soon</div>
+    <div class="wordmark"><span class="a">Love</span><br><span class="b">Tech</span></div>
+    <div class="tagline">Our site is on the way.</div>
+    <div class="inq">For inquiries:</div>
+    <a class="email" href="mailto:ash@infinityengine.ai">ash@infinityengine.ai</a>
+  </div>
+</body>
+</html>
